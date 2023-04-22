@@ -3,6 +3,9 @@
   "version": "1.0",
   "description": "servicios backend REST API",
   "main": "src/server.js",
+  "engines": {
+    "node": "14.x"
+  },
   "scripts": {
     "dev": "cross-env NODE_ENV=dev nodemon src/server",
     "start": "NODE_ENV=production node src/server"
