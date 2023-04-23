@@ -2,7 +2,7 @@
   "name": "servicios-backend",
   "version": "1.0",
   "description": "servicios backend REST API",
-  "main": "index.js",
+  "main": "src/server.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=dev nodemon src/server",
     "start": "NODE_ENV=production node src/server"
