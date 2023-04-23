@@ -4,6 +4,7 @@ app.use(express.json());
 
 app.use(require("./src/routes/index"));
 
+//server run
 app.listen(process.env.PORT || 8888, () => {
   console.log("Server running");
 });
