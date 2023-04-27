@@ -1,4 +1,5 @@
 const { request, response } = require('express');
+const retrieveStatusFocoArduino = require('../../services/movil/retrieveStatusFocoArduino.service');
 
 /**
 *
@@ -7,19 +8,30 @@ const { request, response } = require('express');
 * @param {response} res - HTTP Response instance from express
 * @returns HTTP Response
 */
-const addSomething= async (req = request, res = response) => {
+const getStatusFocoArduino = async (req = request, res = response) => {
 
   try {
+    const statusFoco= await retrieveStatusFocoArduino()
+
+    if(!statusFoco){
+      return res.status(400).json({
+        ok: true,
+        response: {
+          data: statusFoco,
+          message: "forbidden",
+          redirect: false
+        }
+      });
+    }
 
     return res.status(200).json({
       ok: true,
       response: {
-        data: req.body,
+        data: statusFoco,
         message: '[success]',
         redirect: false
       }
     });
-
   } catch (error) {
     console.error(error);
     res.status(500).json({
@@ -31,7 +43,6 @@ const addSomething= async (req = request, res = response) => {
       }
     });
   }
-
 }
 
-module.exports = addSomething;
+module.exports = getStatusFocoArduino;

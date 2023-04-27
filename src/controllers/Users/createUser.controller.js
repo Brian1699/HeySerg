@@ -1,5 +1,5 @@
 const { request, response } = require('express');
-const createUserController= require("../../services/Users/createUser")
+const createUserController= require("../../services/users/createUser")
 /**
 *
 *

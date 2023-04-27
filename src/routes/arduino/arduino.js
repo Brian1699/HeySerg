@@ -1,11 +1,9 @@
 const { Router } = require("express");
-const getUpdates = require("../../controllers/desktop/getUpdates.controller");
-const addSomething=  require("../../controllers/Users/addSomething.controller");
+const sendStatusFocoArduino = require("../../controllers/arduino/sendStatusFocoArduino.controller");
 
 const router = Router();
 
-router.get("/getUpdates", getUpdates)
+router.post("/send/status", sendStatusFocoArduino)
 
-router.post("/addSomething", addSomething)
 
 module.exports = router;
