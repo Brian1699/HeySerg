@@ -9,7 +9,7 @@ const corsConfig = require("./src/corsConfig");
 const app = express();
 
 //? CORS
-app.use(corsConfig(env.NODE_ENV));
+app.use(corsConfig());
 
 //? Enable raw body on request object
 const rawBodySaver = (req, res, buf, encoding) => {
