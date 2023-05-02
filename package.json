@@ -24,7 +24,7 @@
     "fs": "^0.0.1-security",
     "google-search-results-nodejs": "^2.1.0",
     "got": "^11.8.3",
-    "helmet": "^6.0.1",
+    "helmet": "^6.1.5",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.8.0",
     "mongoose-unique-validator": "^3.1.0",

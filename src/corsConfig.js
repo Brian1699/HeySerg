@@ -22,7 +22,7 @@ const corsConfig = (environment) => {
       const corsAllowList = require("./types/corsAllowList");
       allowList = corsAllowList;
     } else {
-      allowList = ["https://serg-dw64yyvwm-brian1699.vercel.app"];
+      allowList = ["https://heyserg.vercel.app/", "http://localhost:3000"];
     }
 
     // Check origin of the request
