@@ -5,7 +5,7 @@ const corsConfig = require("./src/corsConfig");
 
 const app = express();
 
-/* //? CORS
+//? CORS
 app.use(corsConfig());
 
 //? Enable raw body on request object
@@ -22,7 +22,7 @@ const options = {
 app.use(express.json(options));
 app.use(helmet());
 
-app.set("trust proxy", true); */
+app.set("trust proxy", true);
 
 app.use(require("./src/routes/index"));
 
