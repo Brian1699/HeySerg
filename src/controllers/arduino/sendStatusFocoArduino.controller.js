@@ -1,9 +1,7 @@
 const { request, response } = require("express");
 const awaitPythonAudioProcessing = require("../../services/desktop/awaitPythonAudioProcessing.service");
-
+const infoFocoArduino =require("../../helpers/infoFocoArduino.helpers");
 /**
-*
-*
 * @param {request} req - HTTP Request instance from express
 * @param {response} res - HTTP Response instance from express
 * @returns HTTP Response
@@ -21,6 +19,8 @@ const sendStatusFocoArduino = async (req = request, res = response) => {
         }
       });
     }
+ 
+    infoFocoArduino.setData(req.body.status);
       
     const statusFoco = await awaitPythonAudioProcessing(audioArduino);
 
