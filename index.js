@@ -1,7 +1,4 @@
 const express = require("express");
-const morgan = require("morgan");
-const fs = require("fs");
-const path = require("path");
 const helmet = require("helmet");
 const env = require("./src/env");
 const corsConfig = require("./src/corsConfig");
@@ -9,7 +6,7 @@ const corsConfig = require("./src/corsConfig");
 const app = express();
 
 //? CORS
-app.use(corsConfig(env.NODE_ENV));
+app.use(corsConfig());
 
 //? Enable raw body on request object
 const rawBodySaver = (req, res, buf, encoding) => {
@@ -26,13 +23,6 @@ app.use(express.json(options));
 app.use(helmet());
 
 app.set("trust proxy", true);
-
-//* Access log
-const accessLogStream = fs.createWriteStream(
-  path.join(__dirname, "../access.log"),
-  { flags: "a" }
-);
-app.use(morgan("combined", { stream: accessLogStream }));
 
 app.use(require("./src/routes/index"));
 
