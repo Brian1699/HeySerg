@@ -11,7 +11,7 @@ const cors = require("cors");
  */
 const corsConfig = () => {
    try {
-    let allowList  = ["https://heyserg.vercel.app", "http://localhost:3000"];
+    let allowList  = ["https://heyserg.vercel.app", "http://localhost:3000","http://10.9.24.252"];
     
     // Check origin of the request
     const corsOptions = {
