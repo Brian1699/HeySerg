@@ -1,5 +1,5 @@
 const { request, response } = require('express');
-const retrieveStatusFocoArduino = require('../../services/web/retrieveStatusFocoArduino.service');
+const infoFocoArduinoHelpers = require('../../helpers/infoFocoArduino.helpers');
 
 /**
 *
