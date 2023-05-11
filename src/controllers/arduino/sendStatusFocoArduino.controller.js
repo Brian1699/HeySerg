@@ -26,11 +26,7 @@ const sendStatusFocoArduino = async (req = request, res = response) => {
 
     return res.status(200).json({
       ok: true,
-      response: {
-        pred: statusFoco,
-        message: "[success]",
-        redirect: false
-      }
+      response: statusFoco,
     });
   } catch (error) {
     console.error(error);
