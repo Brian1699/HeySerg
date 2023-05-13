@@ -13,7 +13,7 @@ const updateStatusFocoArduino= async (req = request, res = response) => {
 
     const setFoco = req.body.data;
 
-    if(!setFoco || setFoco >= 2){
+    if(setFoco >= 2){
       return res.status(400).json({
         ok: true,
         response: {
