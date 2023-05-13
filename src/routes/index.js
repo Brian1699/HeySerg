@@ -11,8 +11,8 @@ app.use("/web", require("./web/web"));
 //* movil
 app.use("/movil", require("./movil/movil"));
 
-/* //* telegram
-app.use("/telegram", require("./telegram/telegram")); */
+//* telegram
+app.use("/telegram", require("./telegram/telegram"));
 
 
 
