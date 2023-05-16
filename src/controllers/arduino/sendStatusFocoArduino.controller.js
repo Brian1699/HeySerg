@@ -25,8 +25,7 @@ const sendStatusFocoArduino = async (req = request, res = response) => {
     const statusFoco = await awaitPythonAudioProcessing(audioArduino);
 
     return res.status(200).json({
-      ok: true,
-      response: statusFoco,
+      pred: statusFoco,
     });
   } catch (error) {
     console.error(error);
