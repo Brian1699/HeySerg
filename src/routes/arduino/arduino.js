@@ -6,7 +6,7 @@ const router = Router();
 
 router.post("/send/status", sendStatusFocoArduino)
 
-router.post("send/Blestatus", setStatusFocoArduinoBle)
+router.post("/send/Blestatus", setStatusFocoArduinoBle)
 
 
 module.exports = router;
