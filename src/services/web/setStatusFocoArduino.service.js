@@ -1,7 +1,7 @@
 const axios= require("axios");
 
 const setStatusFocoArduino= async (setFoco)=>{
-   await axios.get('https://b824-45-175-233-158.ngrok-free.app/getLight');
+   await axios.get('https://a6d6-200-68-140-153.ngrok-free.app/getLight');
 
   return {
     ok: true,
