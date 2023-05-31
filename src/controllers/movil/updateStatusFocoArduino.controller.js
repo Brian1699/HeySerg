@@ -1,5 +1,6 @@
 const { request, response } = require('express');
 const setStatusFocoArduino = require('../../services/movil/setStatusFocoArduino.service');
+const infoFocoArduinoHelpers = require('../../helpers/infoFocoArduino.helpers');
 
 /**
 *
@@ -24,6 +25,7 @@ const updateStatusFocoArduino= async (req = request, res = response) => {
       });
     }
 
+    infoFocoArduinoHelpers.setData(setFoco);
     const statusFoco= setStatusFocoArduino(setFoco);
     
     return res.status(200).json({

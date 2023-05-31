@@ -1,6 +1,6 @@
 const { Router } = require("express");
-const getStatusFocoArduino = require("../../controllers/web/getStatusFocoArduino.controller");
-const updateStatusFocoArduino = require("../../controllers/web/updateStatusFocoArduino.controller");
+const getStatusFocoArduino = require("../../controllers/movil/getStatusFocoArduino.controller");
+const updateStatusFocoArduino = require("../../controllers/movil/updateStatusFocoArduino.controller");
 
 const router = Router();
 

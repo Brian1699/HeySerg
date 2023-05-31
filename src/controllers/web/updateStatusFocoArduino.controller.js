@@ -1,9 +1,8 @@
 const { request, response } = require('express');
 const setStatusFocoArduino = require('../../services/web/setStatusFocoArduino.service');
+const infoFocoArduinoHelpers = require('../../helpers/infoFocoArduino.helpers');
 
 /**
-*
-*
 * @param {request} req - HTTP Request instance from express
 * @param {response} res - HTTP Response instance from express
 * @returns HTTP Response
@@ -24,6 +23,7 @@ const updateStatusFocoArduino= async (req = request, res = response) => {
       });
     }
 
+    infoFocoArduinoHelpers.setData(setFoco);
     const statusFoco= setStatusFocoArduino(setFoco);
     
     return res.status(200).json({
