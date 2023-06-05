@@ -1,7 +1,7 @@
 const axios = require('axios');
 
 const awaitPythonAudioProcessing= async(audioArduino)=>{
-    const response = await axios.post('https://1b10-200-68-164-39.ngrok-free.app/process-data', {
+    const response = await axios.post('https://d3ea-200-68-140-53.ngrok-free.app/process-data', {
     data: audioArduino,
     status: 0
     });
